@@ -10,11 +10,11 @@ sudo rm -r /etc/update-motd.d/
 sudo mkdir /etc/update-motd.d/
 # create dynamic files
 sudo touch /etc/update-motd.d/00-header ; sudo touch /etc/update-motd.d/10-sysinfo ; sudo touch /etc/update-motd.d/90-footer
-sudo cat motd_scripts/header.script > /etc/update-motd.d/00-header
-sudo cat motd_scripts/body.script > /etc/update-motd.d/10-sysinfo
-sudo cat motd_scripts/footer.script > /etc/update-motd.d/90-footer
+sudo -s 'cat motd_scripts/header.script > /etc/update-motd.d/00-header'
+sudo -s 'cat motd_scripts/body.script > /etc/update-motd.d/10-sysinfo'
+sudo -s 'cat motd_scripts/footer.script > /etc/update-motd.d/90-footer'
 # make files executable
 sudo chmod +x /etc/update-motd.d/*
 # remove MOTD file
-sudo rm /etc/motd.dynamic
+sudo rm -f /etc/motd.dynamic
 echo "Done..."
