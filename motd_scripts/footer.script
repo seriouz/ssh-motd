@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+#    99-footer - write the admin's footer to the MOTD
+#
+[ -f /etc/motd.tail ] && cat /etc/motd.tail || true

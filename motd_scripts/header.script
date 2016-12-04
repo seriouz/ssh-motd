@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+#    00-header - create the header of the MOTD
+#
+[ -r /etc/lsb-release ] && . /etc/lsb-release
+
+if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
+        # Fall back to using the very slow lsb_release utility
+        DISTRIB_DESCRIPTION=$(lsb_release -s -d)
+fi
+
+echo "\033[0;32m`figlet $(hostname)`\033[0m"
+printf "\n"
+
+printf "Welcome to \033[33m%s\033[0m (%s).\n" "$DISTRIB_DESCRIPTION" "$(uname -r)"
+printf "\n"
