@@ -1,5 +1,5 @@
-# install lsb-release, install figlet to enable ASCII art, install update-motd software
-sudo apt install lsb-release figlet update-motd
+# install lsb-release, install figlet to enable ASCII art, install update-motd software, net-tools for route command
+sudo apt install lsb-release figlet update-motd net-tools
 # delete default directory
 sudo rm -r /etc/update-motd.d/
 # create new directory
