@@ -1,9 +1,5 @@
-# install lsb-release 
-sudo apt-get install lsb-release
-# install figlet to enable ASCII art
-sudo apt-get install figlet
-# install update-motd software
-sudo apt-get install update-motd
+# install lsb-release, install figlet to enable ASCII art, install update-motd software
+sudo apt install lsb-release figlet update-motd
 # delete default directory
 sudo rm -r /etc/update-motd.d/
 # create new directory
